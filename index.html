@@ -15,9 +15,35 @@
       justify-content: center;
       height: 100vh;
     }
+
     model-viewer {
       width: 100%;
       height: 100vh;
+    }
+
+    #ar-button {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 16px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    #ar-button:active {
+      background-color: #3367d6;
+    }
+
+    #ar-button:focus {
+      outline: 2px solid #fff;
     }
   </style>
 </head>
@@ -29,6 +55,9 @@
     auto-rotate 
     camera-controls 
     alt="A 3D model in AR">
+    
+    <!-- Custom Big AR Button -->
+    <button slot="ar-button" id="ar-button">📱 View in AR</button>
   </model-viewer>
 </body>
 </html>
